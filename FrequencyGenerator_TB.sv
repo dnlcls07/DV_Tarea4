@@ -1,7 +1,7 @@
 timeunit 1ps; //It specifies the time unit that all the delay will take in the simulation.
 timeprecision 1ps;// It specifies the resolution in the simulation.
 
-module CounterWithFunction_TB;
+module FrequencyGenerator_TB;
 
 	parameter BASE_CLK = 50000000;
 	parameter TARGET_FREQUENCY = 100000;
@@ -17,7 +17,7 @@ bit enable;
 logic [NBITS_FOR_COUNTER-1:0] CountOut; 
 logic flag;
 
-CounterWithFunction
+FrequencyGenerator
 #(
 	// Parameter Declarations
 	.BASE_CLK(BASE_CLK),

@@ -3,8 +3,8 @@ timeprecision 1ps;// It specifies the resolution in the simulation.
 
 module FrequencyGenerator_TB;
 
-	parameter BASE_CLK = 50000000;
-	parameter TARGET_FREQUENCY = 100000;
+	parameter BASE_CLK = 50_000_000;
+	parameter TARGET_FREQUENCY = 1_000_000;
 	parameter MAXIMUM_VALUE = CountValue(TARGET_FREQUENCY,BASE_CLK);
 	parameter NBITS_FOR_COUNTER = CeilLog2(MAXIMUM_VALUE);
 
@@ -14,7 +14,6 @@ bit reset;
 bit enable;
 	
   // Output Ports
-logic [NBITS_FOR_COUNTER-1:0] CountOut; 
 logic flag;
 
 FrequencyGenerator
@@ -33,8 +32,7 @@ DUT
 	.enable(enable),
 	
 	// Output Ports
-	.flag(flag),
-	.CountOut(CountOut) 
+	.flag(flag)
 );
 
 //Procedural assignments

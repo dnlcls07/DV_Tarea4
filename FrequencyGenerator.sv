@@ -2,7 +2,7 @@ module FrequencyGenerator
 #(
 	// Parameter Declarations
 	parameter BASE_CLK = 50000000,	//FPGA base clock frequency obtained internally
-	parameter TARGET_FREQUENCY = 100000,	//Frequency to obtain at the output
+	parameter TARGET_FREQUENCY = 1000,	//Frequency to obtain at the output
 	parameter MAXIMUM_VALUE = CountValue(TARGET_FREQUENCY,BASE_CLK),	//Count to obtain the target frequency
 	parameter NBITS_FOR_COUNTER = CeilLog2(MAXIMUM_VALUE)					//Length for the count
 )
@@ -74,3 +74,5 @@ assign flag = MaxValue_Bit;		//Assign output
  /*--------------------------------------------------------------------*/
  /*--------------------------------------------------------------------*/
  /*--------------------------------------------------------------------*/
+ 
+ endmodule 
